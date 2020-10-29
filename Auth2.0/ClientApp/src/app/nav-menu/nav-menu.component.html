@@ -1,0 +1,14 @@
+<div class="header-outside" >
+  <div class="header-inside">
+    <div class="ctor">
+      <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+        <input class="form-control mr-sm-2 " type="text" placeholder="Email" name="email" required [(ngModel)]="model.email">
+        <input class="form-control mr-sm-2 " type="password" placeholder="Password" name="password" required [(ngModel)]="model.password">
+        <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <p>{{auth | json}}</p>
+</div>
